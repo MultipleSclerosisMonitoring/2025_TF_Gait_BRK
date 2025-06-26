@@ -1,0 +1,5 @@
+influxdb_client>=1.45
+numpy>=2.1
+pandas>=2.2
+setuptools>=75.2
+urllib3>=2.2
