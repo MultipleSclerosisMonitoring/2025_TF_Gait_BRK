@@ -42,11 +42,7 @@ The Data Extraction script processes an input Excel file containing movement met
 ## Usage
 
 ```bash
-python scripts/extract_data.py \
-  -i input_data/sample_input.xlsx \
-  -o output_data/ \
-  -d 10 \
-  -p config/config_db.yaml
+python scripts/extract_data.py \  -i input_data/sample_input.xlsx \  -o output_data/ \  -d 10 \  -p config/config_db.yaml
 ```
 
 ### Arguments
