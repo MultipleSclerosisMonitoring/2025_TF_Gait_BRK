@@ -22,13 +22,22 @@ This two-step process yields a more balanced and cleaner training set, improving
 ---
 
 ## Usage  
+**One-Command Training**
 ```bash
-# Run with StandardScaler (default)
+# Default: StandardScaler
 python run_transformer.py
 
-# Run with RobustScaler
+# For RobustScaler:
 python run_transformer.py robust
 ```
+
+There’s no need to run other scripts manually—`run_transformer.py` handles:
+- Data loading  
+- Preprocessing  
+- Model building  
+- SMOTE application  
+- Training across 3 CV folds  
+- Evaluation and artifact saving  
 
 ---
 
