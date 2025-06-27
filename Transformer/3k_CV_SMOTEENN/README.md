@@ -41,7 +41,7 @@ There’s no need to run other scripts manually—`run_transformer.py` handles:
 
 ---
 
-## Configuration Highlights (`config.py`)  
+## Configuration (`config.py`)  
 - **RAW_DATA_DIR**: Path to folder of `.xlsx` chunks  
 - **TIMESTEPS**, **STRIDE**, **FEAT_COLS**: Windowing parameters  
 - **D_MODEL**, **NUM_HEADS**, **NUM_ENC_LAYERS**, **DROPOUT**: Transformer settings  
@@ -49,6 +49,14 @@ There’s no need to run other scripts manually—`run_transformer.py` handles:
 - **LR_SCHED**: CosineDecayRestarts learning-rate scheduler  
 
 Only `RAW_DATA_DIR` needs updating to switch between chunk-size datasets; scaling method is chosen at runtime.
+Parameters are managed centrally in `config.py`. Be sure to update this file before training.
+
+####  Must-Set Path
+
+```python
+RAW_DATA_DIR = Path("path/to/chunked_xlsx_folder")
+```
+Point this to the appropriate dataset folder e.g., `\data_extraction\chunks_5s`, `\data extraction_\chunks_7s`, etc.
 
 ---
 
