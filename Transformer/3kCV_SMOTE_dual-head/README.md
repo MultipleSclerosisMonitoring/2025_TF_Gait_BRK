@@ -26,7 +26,7 @@ A 3-fold stratified cross-validation ensures robust evaluation, and SMOTE oversa
   Easily customize hyperparameters and data paths via `config.py`.
 
 - **Multiple Chunk Durations**  
-  Trained on independent datasets created from 5s, 7s, 10s, and 15s time chunks—each with Standard and Robust scalers.
+  Trained on independent datasets created from 5s, 7s, 10s, and 15s time chunks each with Standard and Robust scalers.
 
 ---
 
@@ -40,7 +40,7 @@ python run_transformer.py
 python run_transformer.py robust
 ```
 
-There’s no need to run other scripts manually—`run_transformer.py` handles:
+There’s no need to run other scripts manually `run_transformer.py` handles:
 - Data loading  
 - Preprocessing  
 - Model building  
@@ -54,15 +54,15 @@ There’s no need to run other scripts manually—`run_transformer.py` handles:
 
 Parameters are managed centrally in `config.py`. Be sure to update this file before training.
 
-### ✅ Must-Set Path
+###  Must-Set Path
 
 ```python
 RAW_DATA_DIR = Path("path/to/chunked_xlsx_folder")
 ```
 
-Point this to the appropriate dataset folder—e.g., `chunks_5s`, `chunks_7s`, etc.
+Point this to the appropriate dataset folder e.g., `\data_extraction\chunks_5s`, `\data extraction_\chunks_7s`, etc.
 
-### ⚙️ Core Parameters
+###  Core Parameters
 
 - **Chunk Feature Columns:**  
   `FEAT_COLS = ["A", "G", "M", "S0", "S1", "S2"]`
