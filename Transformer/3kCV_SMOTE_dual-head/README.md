@@ -4,7 +4,7 @@
 
 This project implements a dual-purpose Transformer network that simultaneously performs **classification** and **feature reconstruction** on windowed time-series data. You supply pre-extracted fixed-length chunks (5s, 7s, 10s, or 15s) labeled with movement types; the model learns to predict the movement category and reconstruct the original signal features from each chunk.
 
-A 3-fold stratified cross-validation ensures robust evaluation, and SMOTE oversampling combats class imbalance. You can choose between **StandardScaler** (default) and **RobustScaler** at runtime—no other steps required.
+A 3-fold stratified cross-validation ensures robust evaluation, and SMOTE oversampling combats class imbalance. You can choose between **RobustScaler**  (default) and **StandardScaler** at runtime—no other steps required.
 
 ---
 
@@ -33,10 +33,10 @@ A 3-fold stratified cross-validation ensures robust evaluation, and SMOTE oversa
 ## One-Command Training
 
 ```bash
-# Default: StandardScaler
+# Default: RobustScaler
 python run_transformer.py
 
-# For RobustScaler:
+# For StandardScaler:
 python run_transformer.py robust
 ```
 
@@ -94,8 +94,8 @@ Point this to the appropriate dataset folder e.g., `\data_extraction\chunks_5s`,
 After each run, results are saved under:
 
 ```plaintext
-./artifacts/artifacts_standard_cv3/
 ./artifacts/artifacts_robust_cv3/
+./artifacts/artifacts_standard_cv3/
 ```
 
 Each folder contains:
