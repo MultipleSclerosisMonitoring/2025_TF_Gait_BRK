@@ -1,6 +1,6 @@
 ### Pre-Trained Dual-Head Transformer Variants
 
-This directory holds the finalized artifacts for the dual-head encoder–decoder Transformer (classification + reconstruction) trained with SMOTE oversampling. Models are organized by chunk duration (5 s, 7 s, 10 s, 15 s) and by scaling method. RobustScaler runs are provided as default; StandardScaler versions are available alongside them.
+This directory holds the finalized artifacts for the dual-head encoder–decoder Transformer (classification + reconstruction) trained with SMOTE oversampling. Models are organized by chunk duration (5s, 7s, 10s, 15s) and by scaling method. RobustScaler runs are provided as default; StandardScaler versions are available alongside them.
 
 Inside each variant folder you’ll find:
 
